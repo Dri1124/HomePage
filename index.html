@@ -33,4 +33,27 @@
 <section class="section scope-section" id="scope"><div class="container"><div class="eyebrow">06 / Understanding the Bigger Picture</div><h2>Genetics Is One Piece of a Much Larger Health Story</h2><div class="scope-copy"><p>While EquiGen's educational resources highlight hereditary breast cancer and familial hypercholesterolemia (FH), it's important to understand that <strong>not all breast cancers are hereditary</strong>, and <strong>FH is not the only cause of high cholesterol or cardiovascular disease.</strong></p><p>Breast cancer can develop without an inherited cancer-predisposing variant. Likewise, heart disease can result from a combination of genetic, environmental, behavioral, and social factors.</p><p>Our focus on these inherited conditions is intended to increase awareness of genetic risk, encourage informed conversations with healthcare professionals, and promote prevention and early detection—not to suggest that genetics alone determines health outcomes.</p><p class="scope-takeaway">Your genes matter, but they are not your entire health story.</p></div></div></section><section class="section cta" id="connect"><div class="container"><div class="eyebrow">07 / Get Involved</div><h2>Help Make Knowledge More Accessible</h2><p>EquiGen welcomes community conversations and connections with healthcare professionals, educators, advocates, and others committed to health equity.</p><p>Interested in supporting the mission? Share your interests and how you would like to contribute.</p><a class="button dark" href="https://docs.google.com/forms/d/e/1FAIpQLScChLNV75ky612fKnJjMUCxXCISd0EAOe5U9LMY7joL-u-wXg/viewform" rel="noopener noreferrer" target="_blank">Get Involved — Interest Form ↗</a></div></section>
 </main><footer class="footer"><div class="container footflex"><div><strong>EquiGen Health Foundation</strong><p>Prevention begins with education.</p><p class="disclaimer"><strong>Educational Disclaimer:</strong> EquiGen Health Foundation provides information for educational purposes only. Our resources do not replace individualized medical advice, genetic counseling, screening, diagnosis, or treatment from qualified healthcare professionals. Having a family history or genetic risk factor does not guarantee that a person will develop a condition, and the absence of a known inherited risk factor does not eliminate the possibility of disease.</p></div><a class="backtop" href="#top">↑ Back to top</a></div></footer>
 <script>const m=document.getElementById('menu'),n=document.getElementById('nav');m.addEventListener('click',()=>{const open=n.classList.toggle('open');m.setAttribute('aria-expanded',String(open))});n.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{n.classList.remove('open');m.setAttribute('aria-expanded','false')}));</script>
-</body></html>
+<script>
+/* Explicit in-page scrolling for embedded GitHub Pages content. */
+(function () {
+  function navigateToSection(event) {
+    const link = event.currentTarget;
+    const hash = link.getAttribute('href');
+    if (!hash || hash.charAt(0) !== '#') return;
+    const destination = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (!destination) return;
+    event.preventDefault();
+    destination.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start'
+    });
+    const nav = document.getElementById('nav');
+    const menu = document.getElementById('menu');
+    if (nav) nav.classList.remove('open');
+    if (menu) menu.setAttribute('aria-expanded', 'false');
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', navigateToSection);
+  });
+})();
+</script></body></html>
